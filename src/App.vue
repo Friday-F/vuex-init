@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>我的年龄:{{$store.state.age}}</p>
+    <p>计算属性之后的年龄:{{$store.getters.getAge}}</p>
+    <!-- <button @click="$store.state.num+=10">更改数据</button> -->
+    
+    <button @click="$store.commit('setAge',10)">更改年纪</button>
+    <button @click="$store.dispatch('changeAge',5)">异步更改年纪</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
+  },
+  mounted(){
+    // console.log(this)
   }
 }
 </script>
