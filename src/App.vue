@@ -3,9 +3,11 @@
     <p>我的年龄:{{$store.state.age}}</p>
     <p>计算属性之后的年龄:{{$store.getters.getAge}}</p>
     <!-- <button @click="$store.state.num+=10">更改数据</button> -->
-    
-    <button @click="$store.commit('setAge',10)">更改年纪</button>
+    <button @click="$store.commit('SOME_MUTATION',10)">更改年纪</button>
     <button @click="$store.dispatch('changeAge',5)">异步更改年纪</button>
+  <p>-------------------------------------------------------------------------------------------</p>
+  <button><router-link to="/vuex">vuex</router-link></button>
+    <router-view></router-view>
   </div>
 </template>
 
