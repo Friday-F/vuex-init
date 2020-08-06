@@ -8,7 +8,7 @@ const moduleC = {
   },
   getters: {
     isTimer(state){
-      return state.timer++
+      return state.timer % 2 === 0 ? '偶数' : "奇数"
     }
   },
   mutations: {

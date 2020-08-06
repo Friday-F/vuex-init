@@ -4,6 +4,7 @@
     <!-- <p>{{$store.state.a.num}}</p> -->
     <p>age:{{age}}</p>
     <p>timer:{{timer}}</p>
+    <p>timer:{{isTimer}}</p>
     <p>a:{{a}}</p>
     <button @click="setNum">actions</button>
     <button @click="setTimer">带有命名空间的action</button>
@@ -12,7 +13,7 @@
   </div>
 </template>
 <script>
-import {mapState,mapActions} from 'vuex'
+import {mapState,mapActions,mapGetters} from 'vuex'
 export default {
   data(){
     return{
@@ -30,6 +31,7 @@ export default {
     }),
     //2
     ...mapState('c',['timer','a']),
+    ...mapGetters('c',['isTimer'])
   },
   created(){
     

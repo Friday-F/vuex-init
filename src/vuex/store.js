@@ -89,7 +89,7 @@ const install = (_Vue)=>{
   // 我们可以在组件中使用store，
   //将store混入到vue中，在全局进行注册，
   applyMixin(Vue)
-  console.log('install', Vue)
+  // console.log('install', Vue)
 }
 export {
   Store,

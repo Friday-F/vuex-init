@@ -2,7 +2,8 @@
   <div id="app">
     <p>我的年龄:{{$store.state.age}}</p>
     <p>计算属性之后的年龄:{{$store.getters.getAge}}</p>
-    <!-- <button @click="$store.state.num+=10">更改数据</button> -->
+    <p>num:{{$store.state.num}}</p>
+    <button @click="$store.commit('setNumber',88)">更改num</button>
     <button @click="$store.commit('SOME_MUTATION',10)">更改年纪</button>
     <button @click="$store.dispatch('changeAge',5)">异步更改年纪</button>
   <p>-------------------------------------------------------------------------------------------</p>
