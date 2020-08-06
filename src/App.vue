@@ -7,6 +7,7 @@
     <button @click="$store.dispatch('changeAge',5)">异步更改年纪</button>
   <p>-------------------------------------------------------------------------------------------</p>
   <button><router-link to="/vuex">vuex</router-link></button>
+  <button><router-link to="/module">模块化</router-link></button>
     <router-view></router-view>
   </div>
 </template>

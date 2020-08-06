@@ -54,12 +54,14 @@ export default new Vuex.Store({ //内部会创造一个vue实例
     },
     changeInfo({
         commit,
+        dispatch,
         state
       }, payload) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
               commit('SET_INFO', payload)
               resolve(state.info)
+              dispatch('changeAge',88)
             }, 2000);
         });
     }

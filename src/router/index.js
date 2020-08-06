@@ -32,6 +32,16 @@ export default new Router({
           component: resolve => require(['../study/actions.vue'], resolve),
         }
       ]
+    },
+    {
+      path:'/module',
+      name: 'module',
+      component: resolve => require(['../study-module/init.vue'], resolve),
+    },
+    {
+      path: '/createNamespacedHelpers',
+      name: 'createNamespacedHelpers',
+      component: resolve => require(['../study-module/cnameS.vue'], resolve),
     }
      
   ]
