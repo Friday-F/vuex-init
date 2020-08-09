@@ -40,7 +40,13 @@ export default {
     //模块化，但没有命名空间的模块
     ...mapActions(['setAsyncNumber']),
     // 模块化，有命名空间的模块:namespaced: true,
-    ...mapActions('c',['changeTimer','changeB']),
+    // 1.
+    // ...mapActions('c',['changeTimer','changeB']),
+    // 2.
+    ...mapActions('c',{
+        changeTimer:'changeTimer',
+        changeB:'changeB'
+    }),
     setNum(){
       this.setAsyncNumber(9)
     },
