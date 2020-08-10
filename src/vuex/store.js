@@ -49,8 +49,8 @@ class Store{
       },
       computed //计算属性会将自己的属性直接放在实例上,也就是说我们可以直接this._vm.getAge
     })
-    console.log(this._vm) //如果不以$xxx命名，是直接可以从实例拿到
-    // console.log(this._vm) //
+    // console.log(this._vm) //如果不以$xxx命名，是直接可以从实例拿到
+    console.log(this._vm) //
 
 
     // 3.mutations

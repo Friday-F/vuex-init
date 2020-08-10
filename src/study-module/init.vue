@@ -30,7 +30,12 @@ export default {
       // timer:state=>state.c.timer,  
     }),
     //2
-    ...mapState('c',['timer','a']),
+    // ...mapState('c',['timer','a']),
+    //3.
+    ...mapState('c',{
+      timer:state=>state.timer,
+      a:state=>state.a
+    }),
     ...mapGetters('c',['isTimer'])
   },
   created(){
