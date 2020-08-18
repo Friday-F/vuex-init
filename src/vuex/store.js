@@ -87,7 +87,7 @@ class Store{
 const install = (_Vue)=>{
   Vue = _Vue;
   // 我们可以在组件中使用store，
-  //将store混入到vue中，在全局进行注册，
+  //将store混入到vue中，在全局进行注册，所有根组件的子组件都会有
   applyMixin(Vue)
   // console.log('install', Vue)
 }

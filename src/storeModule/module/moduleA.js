@@ -24,6 +24,7 @@ const moduleA = {
       setTimeout(() => {
         commit('SET_NUMBER', payload)
         dispatch('setAsyncAge', payload)
+        dispatch('changeA', payload)
       }, 2000);
     }
 }

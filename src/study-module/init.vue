@@ -48,18 +48,20 @@ export default {
     // 1.
     // ...mapActions('c',['changeTimer','changeB']),
     // 2.
-    ...mapActions('c',{
-        changeTimer:'changeTimer',
-        changeB:'changeB'
-    }),
+    // ...mapActions('c',{
+    //     changeTimer:'changeTimer',
+    //     changeB:'changeB'
+    // }),
     setNum(){
       this.setAsyncNumber(9)
     },
     setTimer(){
-      this.changeTimer(9)
+      this.$store.dispatch('c/changeTimer',9)
+      // this.changeTimer(9)
     },
     setB(){
-      this.changeB(99)
+      this.$store.dispatch('c/changeB',99)
+      // this.changeB(99)
     }
     
   }

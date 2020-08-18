@@ -32,10 +32,18 @@ const moduleC = {
         dispatch('changeA', 100)
       }, 2000);
     },
-    changeA({
-        commit
-      }, payload) {
-        commit('SET_A', payload)
+    // changeA({
+    //     commit
+    //   }, payload) {
+    //     commit('SET_A', payload)
+    // },
+    changeA:{
+      root:true,
+      handler({
+          commit
+        }, payload) {
+          commit('SET_A', payload)
+      }
     },
     changeB({
       dispatch

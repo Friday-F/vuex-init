@@ -1,5 +1,5 @@
 const applyMixin = (Vue)=>{
-  //每个组件在创建前都会执行vuexInit初始化，讲store注入进去
+  //在根组件和子组件在创建前都会执行vuexInit初始化，将store注入进去
   Vue.mixin({
     beforeCreate:vuexInit
   })
