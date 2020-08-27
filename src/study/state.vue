@@ -32,6 +32,9 @@ export default {
         return state.age + 10;
       }
     })
+  },
+   mounted(){
+    // console.log('子组件',this)
   }
 
 }

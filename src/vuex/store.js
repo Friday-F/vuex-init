@@ -60,6 +60,7 @@ class Store{
     forEach(options.mutations, (fn, key) => {
       this._mutations[key] = (playload) => fn.call(this,state, playload)
     })
+    // console.log(this._mutations)
 
     // 4.actions
     // 采用了发布订阅模式，将用户定义的mutation和action先保存起来，然后当调用commit的时候我们调用mutations方法

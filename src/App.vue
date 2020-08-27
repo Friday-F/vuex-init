@@ -21,7 +21,7 @@ export default {
     
   },
   mounted(){
-    // console.log(this)
+    console.log('根组件',this)
   }
 }
 </script>

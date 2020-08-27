@@ -21,6 +21,7 @@ const moduleA = {
         dispatch
         }, payload) {
       console.log(rootState, rootGetters)
+      console.log(rootGetters['c/isTimer'])
       setTimeout(() => {
         commit('SET_NUMBER', payload)
         dispatch('setAsyncAge', payload)
